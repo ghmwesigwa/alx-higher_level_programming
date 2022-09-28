@@ -1,7 +1,4 @@
-def square_matrix_simple(matrix=[]):
-    if matrix is not None:
-        new = []
-        for rows in matrix:
-            new.append(list(map(lambda x: x**2, rows)))
-        return (new)
-    return None
+#!/usr/bin/python3
+def square_matrix_simple(matrix):
+    result = [[y ** 2 for y in x] for x in matrix]
+    return result
