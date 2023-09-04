@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+import py_compile
+import os
+
+# Get the Python file name from the environment variable
+pyfile = os.getenv("PYFILE")
+
+if pyfile:
+    # Compile the Python script
+    py_compile.compile(pyfile, cfile=pyfile + "c")
+
+    print(f"Compiling {pyfile} ...")
+else:
+    print("Error: PYFILE environment variable is not set.")
