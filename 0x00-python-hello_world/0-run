@@ -1,22 +1,3 @@
 #!/bin/bash
-# This script runs the Python script specified in the PYFILE environment variable
-
-# Check if the PYFILE environment variable is set
-if [ -z "$PYFILE" ]; then
-  echo "Error: PYFILE environment variable is not set."
-  exit 1
-fi
-
-# Construct the full path to the Python file based on the script's location
-SCRIPT_DIR="$(dirname "$0")"
-PYTHON_FILE="$SCRIPT_DIR/$PYFILE"
-
-# Check if the specified Python file exists
-if [ ! -f "$PYTHON_FILE" ]; then
-  echo "Error: The specified Python file '$PYTHON_FILE' does not exist."
-  exit 1
-fi
-
-# Run the Python script
-python3 "$PYTHON_FILE"
+python3 "$PYFILE"
 
